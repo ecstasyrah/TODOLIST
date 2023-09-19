@@ -1,0 +1,85 @@
+
+body{
+    background-color: rgb(70, 44, 70);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+}
+.box{
+    border: solid rgb(35, 20, 35) 2px;
+    margin: 0;
+    padding: 50px;
+    border-radius: 50px;
+    background-color: rgba(146, 126, 154, 0.889);
+}
+
+    .title{
+    font-size:xx-large;
+    color: rgb(59, 2, 82);
+    border: solid rgba(62, 7, 62, 0.382);
+    padding: 0;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    background-color: rgba(49, 25, 67, 0.575);
+    -webkit-text-stroke: 1px rgb(174, 149, 181);
+    -webkit-text-fill-color: rgb(62, 24, 68);
+    }
+
+
+.search{
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    height: 20px;
+    border-radius: 20px;
+    width: 40vw;
+    border: rgb(192, 153, 210);
+    background-color: rgba(35, 32, 68, 0.308);
+    text-align: center;
+    margin-right: 2vw;
+    margin-bottom: 5vh;
+    color: rgb(202, 174, 208);
+}
+
+.button{
+    width: 10vw;
+    background-color: rgba(159, 150, 214, 0.516);
+    color: black;
+    font-weight: 750;
+}
+
+.deleteB{
+    width: 10vw;
+    background-color: rgba(159, 150, 214, 0.516);
+    color: black;
+    margin-left: 0;
+    height: 40px;
+    font-weight: 750;
+}
+
+.toDoThings{
+    display: flex;
+}
+
+.textB{
+    color: rgb(55, 20, 92);
+    width: 40vw;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgba(113, 83, 119, 0.412);
+    text-align: center;
+    margin-right: 2vw;
+    margin-bottom: 1vw;
+    color: rgb(55, 20, 92);
+}
+
+span{    
+    color: rgb(55, 20, 92);
+}
+
+::placeholder{
+    color: rgb(216, 180, 232);
+}
+
