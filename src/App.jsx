@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
@@ -8,6 +8,8 @@ import './des.css'
 function App() {
   const [toDo, setToDo] = useState([])
   const [newTD, setNewTD] = useState("")
+  const [disableAdd, setDisableAdd] = useState(true);
+  const [empty, setEmpty] = useState("");
 
   const addToDo = () => {
     if (newTD.trim() !== ""){
@@ -17,6 +19,8 @@ function App() {
       }
       setToDo([...toDo, newReq]);
       setNewTD("");
+    } else {
+      setEmpty("Enter a task");
     }
   }
 
@@ -24,6 +28,12 @@ function App() {
     const updatedToDo = toDo.filter((td) => td.id !== tdID);
     setToDo(updatedToDo);
   };
+
+  useEffect(() => {
+    setDisableAdd((newTD === "" || !/^[a-zA-z\s]+$/.test(newTD)))
+  }, [newTD]);
+
+  const disabled = {disableAdd}; 
 
   return (
     <div  className = "box">
@@ -37,7 +47,9 @@ function App() {
           onChange={(e) => setNewTD(e.target.value)}
           className="search"
         />
-        <button className="button" onClick={addToDo}>GO!</button>
+        <button className="button" onClick={addToDo} disabled={disableAdd}>GO!</button>
+        
+        {disableAdd && newTD.trim() !== "" ? <p className="error">No special characters or numbers!</p> : <p>DO SOMETHING</p>} 
       <div>
         {toDo.map((td) => (
           <TodoThings 

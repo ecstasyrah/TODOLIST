@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(70, 44, 70);
+    background-color: rgb(180, 151, 180);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 1000;
 }
@@ -36,7 +36,7 @@ body{
     background-color: rgba(35, 32, 68, 0.308);
     text-align: center;
     margin-right: 2vw;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
     color: rgb(202, 174, 208);
 }
 
@@ -81,5 +81,10 @@ span{
 
 ::placeholder{
     color: rgb(216, 180, 232);
+}
+
+.error{
+    color: rgb(153, 58, 58);
+    margin-right: 11vw;
 }
 
