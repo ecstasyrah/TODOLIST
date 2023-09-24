@@ -19,8 +19,6 @@ function App() {
       }
       setToDo([...toDo, newReq]);
       setNewTD("");
-    } else {
-      setEmpty("Enter a task");
     }
   }
 
@@ -38,7 +36,7 @@ function App() {
   return (
     <div  className = "box">
         <div className = "title">
-          <p>Open Say's laptop for:</p>
+          <p>Say's To-do list</p>
         </div>
         <input 
           type="text"
@@ -49,7 +47,7 @@ function App() {
         />
         <button className="button" onClick={addToDo} disabled={disableAdd}>GO!</button>
         
-        {disableAdd && newTD.trim() !== "" ? <p className="error">No special characters or numbers!</p> : <p>DO SOMETHING</p>} 
+        {disableAdd && newTD.trim() !== "" ? <p className="error">No special characters or numbers!</p> : null} 
       <div>
         {toDo.map((td) => (
           <TodoThings 
